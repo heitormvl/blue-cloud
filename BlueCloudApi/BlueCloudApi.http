@@ -1,6 +1,34 @@
 @BlueCloudApi_HostAddress = http://localhost:5299
 
-GET {{BlueCloudApi_HostAddress}}/weatherforecast/
+GET {{BlueCloudApi_HostAddress}}/Tasks
 Accept: application/json
 
 ###
+
+GET {{BlueCloudApi_HostAddress}}/Tasks/1
+Accept: application/json
+
+###
+
+POST {{BlueCloudApi_HostAddress}}/Tasks
+Content-Type: application/json
+
+{
+    "title": "New Task",
+    "isCompleted": false
+}
+
+###
+
+PUT {{BlueCloudApi_HostAddress}}/Tasks/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Updated Task",
+    "isCompleted": true
+}
+
+###
+
+DELETE {{BlueCloudApi_HostAddress}}/Tasks/1
