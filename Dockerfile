@@ -6,7 +6,7 @@
     # Copia o arquivo de projeto para o diretório de trabalho (aproveite o cache de camadas do Docker)
     COPY BlueCloudApi/BlueCloudApi.csproj BlueCloudApi/
     # Restaura as dependências do projeto
-    RUN dotnet restore
+    RUN dotnet restore BlueCloudApi/BlueCloudApi.csproj
     # Copia todo o código-fonte para o diretório de trabalho
     COPY . .
     WORKDIR /src/BlueCloudApi
